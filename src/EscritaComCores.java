@@ -1,20 +1,26 @@
-public class EscritaComCores {
+///Autor: MateusAlgayer
+public abstract class EscritaComCores {
   private static final String RESET = "\u001B[0m";
+  private static CoresTexto corTexto = CoresTexto.BRANCO;
+
+  public static void setCorTexto(final CoresTexto cor){
+    corTexto = cor;
+  }
+
+  public static void textoColorido(final String txt){
+    textoColorido(txt, corTexto);
+  }
+
+  public static void textoColorido(final String txt, final CoresTexto cor){
+    System.out.println(cor+txt+RESET);
+  }
   
-  private CoresTexto corTexto = CoresTexto.BRANCO;
-
-  EscritaComCores(CoresTexto corTexto){
-    this.corTexto = corTexto;
+  public static void textoColoridof(final String txt, Object ... args){
+    System.out.printf(corTexto+txt+RESET, args);
   }
-
-  /// Equivalente ao System.out.println só que com as cores definidas
-  public void nl(String txt){
-    System.out.println(corTexto+txt+RESET);
-  }
-
-  /// Equivalente ao System.out.printf só que com as cores definidas
-  public void nlf(String txt, Object ... args){
-    System.out.printf(corTexto+txt+"\n"+RESET, args);
+  
+  public static String getTextoColorido(final String txt){
+    return corTexto+txt+RESET;
   }
 
   static void textoCoresAleatorias(String txt){

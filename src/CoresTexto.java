@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+///Autor: MateusAlgayer
 public enum CoresTexto {
   PRETO("\u001B[30m"),
   VERMELHO("\u001B[31m"),		

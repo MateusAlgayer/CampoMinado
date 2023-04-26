@@ -1,3 +1,4 @@
+///Autor: MateusAlgayer
 public enum CoresFundo {
   PRETO("\u001B[40m"),
   VERMELHO("\u001B[41m"),
