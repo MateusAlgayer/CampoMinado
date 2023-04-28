@@ -23,7 +23,7 @@ public abstract class Leitor{
         entrada.setMarcar(false);
         return entrada;
       } catch (Exception e) {
-        EscritaComCores.textoColorido("A entrada deve ser no formato n,m onde n e m devem ser números inteiros!", CoresTexto.VERMELHO);
+        Escrita.comCores("A entrada deve ser no formato n,m onde n e m devem ser números inteiros!", CoresTexto.VERMELHO);
       }
     }
   }
@@ -47,7 +47,7 @@ public abstract class Leitor{
         entrada.setMarcar(vetTxt.length == 3 ? vetTxt[2].equals("m") : false);
         return entrada;
       } catch (Exception e) {
-        EscritaComCores.textoColorido("A entrada deve ser no formato x,y,m onde x e y devem ser números inteiros\ne m pode ou não estar presente!", CoresTexto.VERMELHO);
+        Escrita.comCores("A entrada deve ser no formato x,y,m onde x e y devem ser números inteiros\ne m pode ou não estar presente!", CoresTexto.VERMELHO);
       }
     }
   }
