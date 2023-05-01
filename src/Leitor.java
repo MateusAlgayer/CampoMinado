@@ -15,7 +15,7 @@ public abstract class Leitor{
         txt = sc.nextLine();
         txt = txt.toUpperCase();
         if(txt.equals("S") || txt.equals("N")){
-          return txt == "S";
+          return txt.equals("S");
         }
       } catch (Exception e) {
         System.out.println("Responda apenas com S ou N");
