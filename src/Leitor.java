@@ -4,6 +4,25 @@ import java.util.Scanner;
 public abstract class Leitor{
   private static Scanner sc;
 
+  public static boolean leBool(){
+    if(sc == null){
+      sc = new Scanner(System.in);
+    }
+
+    String txt;
+    while(true){
+      try {
+        txt = sc.nextLine();
+        txt = txt.toUpperCase();
+        if(txt.equals("S") || txt.equals("N")){
+          return txt == "S";
+        }
+      } catch (Exception e) {
+        System.out.println("Responda apenas com S ou N");
+      }
+    }
+  }
+
   public static Ponto leXY(){
     if(sc == null){
       sc = new Scanner(System.in);
@@ -48,6 +67,31 @@ public abstract class Leitor{
         return entrada;
       } catch (Exception e) {
         Escrita.comCores("A entrada deve ser no formato x,y,m onde x e y devem ser números inteiros\ne m pode ou não estar presente!", CoresTexto.VERMELHO);
+      }
+    }
+  }
+
+  public static Dificuldade leDificuldade() {
+    if(sc == null){
+      sc = new Scanner(System.in);
+    }
+
+    while(true){
+      try {
+        Escrita.comCores("Escolha a dificuldade do jogo:");
+        for (int i = 0; i < Dificuldade.niveis.size(); i++) {
+          Escrita.comCores(i+" - "+Dificuldade.niveis.get(i)+": percentual de bombas = "+Math.round(Dificuldade.niveis.get(i).getPercentual()*100)+"%");
+        }
+        String txt = sc.nextLine();
+        int idx = Integer.parseInt(txt);
+
+        if(idx < 0 || idx > Dificuldade.niveis.size()){
+          throw new Exception("Entrada inválida!!");
+        }
+
+        return Dificuldade.niveis.get(idx);
+      } catch (Exception e) {
+        Escrita.comCores("A entrada deve ser um número entre 0 e "+(Dificuldade.niveis.size()-1), CoresTexto.VERMELHO);
       }
     }
   }

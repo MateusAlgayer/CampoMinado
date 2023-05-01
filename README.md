@@ -1,18 +1,16 @@
-## Getting Started
+# Sobre o projeto
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+---
 
-## Folder Structure
+Este projeto foi desenvolvido para a cadeira de linguagem de programação II do curso superior em Análise e desenvolvimento de sistemas, o objetivo do trabalho era o de criar o jogo “Campo minado” utilizando apenas do CMD para exibir os campos. Este trabalho foi criado para auxiliar na prática da linguagem Java, dentre os conceitos utilizados no aplicativo estão:
 
-The workspace contains two folders by default, where:
+- Criação e manipulação de listas
+- Criação e manipulação de objetos
+- Uso de Exceptions e tratamentos de erro.
+- Validações de entrada do usuário.
+- Herança e polimorfismo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+---
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Para jogar o jogo basta baixar o projeto e executar no NetBeans ou outra IDE de sua escolha.
+Pode utilizar o .jar que está no GitHub também, porém com ele é necessário desabilitar as cores do jogo :(

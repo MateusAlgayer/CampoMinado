@@ -1,4 +1,5 @@
-public class CampoComMina implements AcoesCampo{
+public class CampoComMina extends Campo {
+  private final static String CAMPOMINADO = "* ";
 
   @Override
   public boolean isRecursivel() {
@@ -6,19 +7,17 @@ public class CampoComMina implements AcoesCampo{
   }
 
   @Override
-  public void marcar() {
-    // TODO Auto-generated method stub
+  public void pisar() throws PisouEmMina{
+    throw new PisouEmMina();
   }
 
   @Override
-  public void pisar() {
-    // TODO Auto-generated method stub
+  public void setAberto(final boolean isAberto){
+    //Não faz nada, não deve abrir campos com mina.
   }
 
   @Override
   public String toString() {
-    return CAMPOFECHADO;
+      return super.toString(Escrita.getText(String.format("%"+numCasas+"s", CAMPOMINADO), CoresTexto.VERMELHO));
   }
-
-  
 }

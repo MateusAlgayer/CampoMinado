@@ -28,7 +28,7 @@ public abstract class Escrita {
   }
 
   public static String getText(final Object txt, final CoresTexto cor){
-    return corTexto+""+txt+""+RESET;
+    return cor+""+txt+""+RESET;
   }
 
   public static void comCoresAleatorias(String txt){
