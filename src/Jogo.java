@@ -33,7 +33,7 @@ public class Jogo {
     
     //Inicializa o tabuleiro
     tabuleiro = new ArrayList<>();
-    for (int i = 0; i < tamanhoY; i++) {
+    for (int i = 0; i < tamanhoX; i++) {
       tabuleiro.add(new ArrayList<Campo>()); 
     }
     
